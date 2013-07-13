@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Posts
-tagline: Supporting tagline
+tagline: Even my posts got posts
 ---
 {% include JB/setup %}
 
