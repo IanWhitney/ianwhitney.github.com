@@ -1,12 +1,18 @@
 ---
 layout: page
-title: Posts
+title: IanWhitney.github.io
 tagline: Even my posts got posts
 ---
 {% include JB/setup %}
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+  <article>
+    <h1>
+      <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    <p class="meta">
+      {{ post.date | date_to_long_string }} 
+    </p>
+   {{ post.content }} 
+  </article>
+{% endfor %}
