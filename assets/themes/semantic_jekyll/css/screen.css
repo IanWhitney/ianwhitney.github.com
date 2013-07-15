@@ -195,3 +195,20 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
+
+/**********************/
+
+body {
+  font-family: 'Lora', serif;
+}
+
+article h1 {
+  font-size: 200%;
+  letter-spacing: 0.1em;
+  font-family: 'Josefin Slab', serif !important;
+  margin: 1em 0px 0px 0px;
+}
+
+h1 + .meta {
+  margin-top: 0px;
+}

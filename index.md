@@ -8,11 +8,15 @@ tagline: Even my posts got posts
 {% for post in site.posts %}
   <article>
     <h1>
-      <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      {{ post.title }}
     </h1>
     <p class="meta">
       {{ post.date | date_to_long_string }} 
     </p>
-   {{ post.content }} 
+    {{ post.content }}
+    <p>
+      <a href="{{ BASE_PATH }}{{ post.url }}">Leave a comment</a>
+    </p>
   </article>
+  <hr />
 {% endfor %}
