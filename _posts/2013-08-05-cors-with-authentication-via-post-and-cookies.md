@@ -31,10 +31,10 @@ documentation on the Web about more complex setups.
 
 I needed to solve some problems:
 
-  - I needed to authenticate with the API server via a POST request.
-  - My subsequent GET requests needed to include a cookie.
-  - I needed to restrict the server so that it only allowed POST and GET
-    requests.
+- I needed to authenticate with the API server via a POST request.
+- My subsequent GET requests needed to include a cookie.
+- I needed to restrict the server so that it only allowed POST and GET
+  requests.
 
 The last one is the easiest. Your server configuration file will need a
 line like this:
