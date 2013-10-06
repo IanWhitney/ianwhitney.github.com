@@ -7,12 +7,12 @@ tags: []
 ---
 {% include JB/setup %}
 
-We just wrapped up a project that featured several approaches I'm very
+We just wrapped up a project that featured several patterns I'm very
 interested in:
 
 - Client-generated visualizations
-- Ember
-- Rails as a API only
+- Ember.js
+- Rails as a API-only, no views
 
 The goal of the project was to release a tool that would let those who
 schedule college classes see when other classes are being scheduled. The
