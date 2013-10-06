@@ -26,15 +26,15 @@ worked on the most, the visualization library.
 ### Starting with D3
 
 Once we got the client to agree that IE8 would not be supported, using
-(http://d3js.org)[D3] as our visualization tool made perfect sense. It's
+[http://d3js.org](D3) as our visualization tool made perfect sense. It's
 powerful, fast and widely used. If we'd had to support IE8 than we would
 have had to look elsewhere, as D3 generates SVG graphics, which are
 unsupported by IE8.
 
 I got the task of prototyping visualizations in D3 and learning its
 syntax, as none of us had used it before. I quickly settled on using a
-heat-map visualization, like (http://bl.ocks.org/tjdecke/5558084)[this
-one].
+heat-map visualization, like [http://bl.ocks.org/tjdecke/5558084](this
+one).
 
 D3 syntax can be challenging when you first come to it, but I found it
 easier to focus on learning about just this one visualization: how is it
@@ -43,7 +43,7 @@ are a ton of D3 features, 90% of which I didn't need for this project.
 So by focusing on the features I did need, I made the learning curve
 more manageable.
 
-Soon enough I had a (https://github.umn.edu/whit0694/le_heatmap_demo/raw/master/examples/example.png)[demonstration visualization] that got buy in from the team. It was far from perfect, but it showed us the way.
+Soon enough I had a [https://github.umn.edu/whit0694/le_heatmap_demo/raw/master/examples/example.png](demonstration visualization) that got buy in from the team. It was far from perfect, but it showed us the way.
 
 ### Wrapping It
 
@@ -66,9 +66,9 @@ sense, and those tests would serve as documentation of how the
 visualization api worked.
 
 This sort of modular JavaScript approach is new to me, so it took some
-reasearch. (http://addyosmani.com/resources/essentialjsdesignpatterns/book/)[Learning JavaScript Design Patterns] was a huge help to me, especially the section on the (http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript)[Revealing Module Pattern], which is more or less what I followed.
+reasearch. [http://addyosmani.com/resources/essentialjsdesignpatterns/book/](Learning JavaScript Design Patterns) was a huge help to me, especially the section on the [http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript](Revealing Module Pattern), which is more or less what I followed.
 
-Testing was done in (http://pivotal.github.io/jasmine/)[Jasmine] which
+Testing was done in [http://pivotal.github.io/jasmine/](Jasmine) which
 was ok. I don't care for how it handles test doubles (or 'spies' as it
 calls them). I found the syntax for mocking and expectations to be
 particularly weird. But it is fast and it integrated well with the code
