@@ -76,6 +76,8 @@ I was working on. I want to try other testing frameworks to see if the
 syntax is easier to wrangle. But maybe that syntax problem is intrinsic
 to JavaScript.
 
+### The Final Product
+
 And at the end of this I ended up with a modular visualization library that is
 totally separate from Ember and ready to be dropped into any project
 that might need it.\* All the project needs to know about are three simple
