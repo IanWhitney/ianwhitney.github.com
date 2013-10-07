@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Visualization Retrospective: Wrapping up D3"
-description: ""
+description: "A brief discussion of wrapping the D3 library in a
+namespaced JavaScript module"
 category: 
 tags: []
 ---
