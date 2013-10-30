@@ -101,14 +101,13 @@ go off.
 Fast forward several months and I find myself implementing this pattern
 again in a different code base. But now I have [this video](http://confreaks.com/videos/2452-railsconf2013-the-magic-tricks-of-testing), in which (at the 29 minute mark), Sandi Metz points to four ([quacky] (https://github.com/benmoss/quacky), [bogus] (https://github.com/psyho/bogus), [rspec-fire] (https://github.com/xaviershay/rspec-fire), [minitest-firemock] (https://github.com/cfcosta/minitest-firemock)) gems that can solve this problem in a better way.
 
-After reviewing the options, I chose Bogus. It's use seemed the cleanest
-and it appeared to have solid documentation. While implementing it, I
-found that documentation to be somewhat lacking, hence this blog post.
+After reviewing the options, I chose Bogus. Its use seemed the cleanest
+and it appeared to have solid documentation. I eventually found that documentation to be somewhat lacking, hence this blog post.
 
 First, I'm implementing this with MiniTest spec, and their documentation
 leaned more to the Rspec crowd. And I'm testing ActiveRecord objects,
 while their documentation focused on plain Ruby code. Those little
-wrinkles can trip you up.
+wrinkles can trip you up. They certainly tripped me up.
 
 ### Getting your 'test_helper' in shape
 
@@ -119,7 +118,7 @@ I created a new helper file
     require 'minitest/autorun'
     require 'bogus/minitest/spec'
 
-Nothing too exciting there. On to the test:
+### On to the test
 
     describe Fruit do
       fake(:garden)
@@ -143,15 +142,24 @@ want.
 All of the examples in Bogus use the first method. The 2nd [is
 documented] (https://www.relishapp.com/bogus/bogus/v/0-1-4/docs/fakes/faking-existing-classes), but I was so busy looking at the examples that I didn't notice.
 
-The result of this magic is that I can use `garden` and `trellis` in
-my tests and stub methods on them. But if I try to stub something that
-the classes don't support, Bogus will throw an error.
+### Now the magic
+
+The result of fakes is that I can use `garden` and `trellis` in
+my tests and stub methods on them. And that separate directory of double
+classes? Gone. The library of interface tests? Gone. All I have now are
+the real object defitions that I fake during tests.
+
+### And the magic has a posse
+
+But if I try to stub something that the classes don't support, Bogus will throw an error.
 
     stub(garden).disco_party? { true} => #NameError: #<Garden:0x3fea091c41b0> does not respond to disco_party?
 
 And arity is respected:
 
     stub(trellis).leg_number(1, 'huh?') { nil } => ArgumentError: tried to stub leg_number(count) with arguments: 1,'huh?'
+
+### But maybe not magic enough?
 
 This is all excellent and much appreciated. Now I can create doubles
 with ease and not worry about API drift. Let's throw them on some
