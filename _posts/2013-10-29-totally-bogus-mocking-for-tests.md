@@ -94,9 +94,9 @@ or less, from Sandi Metz's book.
     end
 
 Still duplication (actually now triplication of the API methods), but at
-least I could control drift. If Record or RecordDouble stopped
+least I could control drift. Kind of. If Record or RecordDouble stopped
 supporting a method that was in the interface test, an alarm bell would
-go off.
+go off. But if arity changed, I wouldn't notice.
 
 Fast forward several months and I find myself implementing this pattern
 again in a different code base. But now I have [this video](http://confreaks.com/videos/2452-railsconf2013-the-magic-tricks-of-testing), in which (at the 29 minute mark), Sandi Metz points to four ([quacky] (https://github.com/benmoss/quacky), [bogus] (https://github.com/psyho/bogus), [rspec-fire] (https://github.com/xaviershay/rspec-fire), [minitest-firemock] (https://github.com/cfcosta/minitest-firemock)) gems that can solve this problem in a better way.
