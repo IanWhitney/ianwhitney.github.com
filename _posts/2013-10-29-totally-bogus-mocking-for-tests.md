@@ -8,7 +8,7 @@ tags: []
 {% include JB/setup %}
 
 I love me some mocks and stubs. Like many people, I didn't really get
-the idea until I did [some reading](http://martinfowler.com/articles/mocksArentStubs.html) about the technique. And then I didn't *really* get it until I did [some more reading](http://www.poodr.com/). And even then I didn't *__really__* get it until I re-wrote a suite of tests like 3 times, each time getting closer to that coding nirvana: a blazingly fast group of tests that exposes dependencies and is resilient to change.
+the idea until I did [some reading](http://martinfowler.com/articles/mocksArentStubs.html) about the technique. And then I didn't *really* get it until I did [some more reading](http://www.poodr.com/). And even then I didn't __really__ get it until I re-wrote a suite of tests like 3 times, each time getting closer to that coding nirvana: a blazingly fast group of tests that exposes dependencies and is resilient to change.
 
 A big step for me was implementing real testing doubles, moving away
 from tiny structs and actually creating a Ruby class to act as my
